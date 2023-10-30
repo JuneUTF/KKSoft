@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juneutf.kk.office.mapper.MendanMapper">
+
+	<select id="getMendanByStatus" resultType="com.juneutf.kk.office.model.MendanModel">
+	SELECT
+    interview.id,interview.interview,interview.number_interview,interview.date_plan,interview.date_day,interview.date_time,interview.method,interview.nameid,interview.guest,interview.charge,user_infor.fullname AS chargename,interview.status
+	FROM interview
+    JOIN user_infor ON interview.charge = user_infor.ID
+	WHERE interview.date_plan >= current_date
+	ORDER BY interview.date_plan ASC;
+	</select>
+
+</mapper>

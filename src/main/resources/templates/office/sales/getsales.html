@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="jp">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript"
+	src="/style/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/style/css/menu.css">
+<link rel="stylesheet" href="/style/css/operation.css">
+<title>内容・担当編集管理</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark"
+		style="background-color: #df895e;">
+		<div class="container-fluid">
+			<a class="navbar-brand fw-bold" href="/">面談管理システム</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-lg-0">
+					<li class="nav-item"><a class="nav-link"
+						href="/kk/office/home">ホーム</a></li>
+					<li class="nav-item"><a class="nav-link btn btn-secondary"
+						href="/kk/office/mendan">予約一覧・編集</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/kk/office/sales">面談新規予約</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/kk/office/employee">面談人管理</a></li>
+					<li class="nav-item"><a class="nav-link" href="/kk/password">パスワード変更</a></li>
+				</ul>
+				<div class="d-flex">
+					<a class="btn btn-outline-light" href="/logout"><span
+						th:if="${#request.userPrincipal != null}"
+						th:text="${#request.userPrincipal.name}"></span></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div id="showForm"></div>
+	<section class="intro">
+		<div class="bg-image h-100" style="background-color: #f5f7fa;">
+			<div class="mask d-flex align-items-center h-100">
+				<div class="px-1" style="width: 100%;">
+					<div class="row justify-content-center">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-body">
+									<div id="logo" class="col-6">
+										<img alt="K&Kソフト株式株式" src="/file/logo.png">
+									</div>
+									<div class="table-responsive table-scroll"
+										data-mdb-perfect-scrollbar="true">
+										<div class="row justify-content-center">
+											<div class="col col-md-12 justify-content-center">
+												<table class="table table-striped">
+													<thead style="background-color: #df895e;">
+														<tr class="text-center">
+															<th scope="col" class="col-1">面談回数</th>
+															<th scope="col" class="col-2">日付</th>
+															<th scope="col" class="col-1">時間</th>
+															<th scope="col" class="col-2">対象</th>
+															<th scope="col" class="col-2">客情報</th>
+															<th scope="col" class="col-1">面談方法</th>
+															<th scope="col" class="col-1">担当者</th>
+															<th scope="col" class="col-1">状況</th>
+															<th scope="col" class="col-2">行動</th>
+														</tr>
+													</thead>
+													<tbody class="text-center">
+														<tr>
+															<td
+																th:text="${sales.interview}+'/'+${sales.number_interview}">1</td>
+															<td
+																th:text="${sales.date_plan}+'('+${sales.date_day}+')'"></td>
+															<td th:text="${sales.date_time}"></td>
+															<td th:text="${sales.nameid}"></td>
+															<td th:text="${sales.guest}"></td>
+															<td th:text="${sales.method}"></td>
+															<td th:text="${sales.chargename}"></td>
+															<td th:text="${sales.status}"></td>
+															<td><a class="btn btn-outline-success"
+																th:href="'/kk/office/edit?id=' + ${sales.id}">編集</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="/style/soket/sockjs_1.4.0.js"></script>
+	<script type="text/javascript" src="/style/soket/stomp_2.3.3.js"></script>
+</body>
+
+</html>

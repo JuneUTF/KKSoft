@@ -1,0 +1,85 @@
+.intro {
+  height: 100vh;
+  padding: 0 10px;
+  background-color: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+table td,
+table th {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size:20px;
+}
+
+thead th {
+  color: #FFF;
+}
+.row {
+	    --bs-gutter-x: 0 !important;
+}
+.card {
+  border-radius: .5rem;
+}
+@-webkit-keyframes my {
+  0% { color: red; } 
+  50% { color: yellow;  } 
+  100% { color: red;  } 
+}
+@-moz-keyframes my { 
+  0% { color: red;  } 
+  50% { color: yellow;  }
+  100% { color: red;  } 
+}
+@-o-keyframes my { 
+  0% { color: red; } 
+  50% { color: yellow; } 
+  100% { color: red;  } 
+}
+@keyframes my { 
+  0% { color: red;  } 
+  50% { color: yellow;  }
+  100% { color: red;  } 
+}
+.yoyaku {
+	padding: 5px;
+	font-weight: bold;
+	border-radius: 5px;
+	background-color:#198754;
+  	-webkit-animation: my 700ms infinite;
+  	-moz-animation: my 700ms infinite; 
+  	-o-animation: my 700ms infinite; 
+  	animation: my 700ms infinite;
+}
+.align-items-center {
+    background-color: white;
+}
+.card, .card-body{
+	padding: 0 !important;
+}
+form{
+	display: inline;
+	padding-left: 10px;
+}
+#logo img{
+	width:auto;
+	height: 50px;
+}
+.eigyo{
+	text-align: center;
+	border: 1px solid #000;
+	border-radius: 10px;
+}
+h3{
+	margin: 0;
+  	padding: 10px;
+  	color:red;
+  	font-weight:bold;
+	border-bottom: 1px solid #000;
+}
+.eigyo .content {
+	background-color: red;
+}

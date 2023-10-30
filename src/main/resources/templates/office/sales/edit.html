@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="jp">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/style/bootstrap/css/bootstrap.min.css">
+<script src="/style/bootstrap/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="/style/css/home.css">
+<link rel="stylesheet" href="/style/css/menu.css">
+<title>面談管理システム‐面談新規予約</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark"
+		style="background-color: #df895e;">
+		<div class="container-fluid">
+			<a class="navbar-brand fw-bold" href="/">面談管理システム</a>
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-lg-0">
+					<li class="nav-item"><a class="nav-link"
+						href="/kk/office/home">ホーム</a>
+					<li class="nav-item"><a class="nav-link" href="/kk/office/mendan">予約一覧・編集</a>
+					</li>
+					<li class="nav-item"><a class="nav-link btn btn-secondary"
+						href="/kk/office/sales">面談新規予約</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/kk/office/employee">面談人管理</a></li>
+					<li class="nav-item"><a class="nav-link" href="/kk/password">パスワード変更</a></li>
+				</ul>
+				<div class="d-flex">
+					<a class="btn btn-outline-light" href="/logout"><span
+						th:if="${#request.userPrincipal != null}"
+						th:text="${#request.userPrincipal.name}"></span></a>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<nav class="tableShow">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-12 form-container">
+					<div id="logo" class="text-center pb-1">
+						<img alt="K&Kソフト株式株式" src="/file/logo.png">
+					</div>
+					<p class="text-success text-center fs-5" th:text="${msg}"></p>
+					<p class="text-danger text-center fs-5" id="msg"></p>
+					<form class="login-form" th:action="@{/kk/office/edit}"
+						method="post">
+					<h2 class="text-center mb-2">面談新規予約</h2>
+						<div class="row justify-content-center">
+							<div class="col-md-6">
+								<div class="mb-1">
+									<label for="date_day" class="form-label">日付：(<input
+										type="text" name="date_day" class="none_css" id="date_day" th:value="${sales.date_day}"
+										required readonly>)
+									</label> <input type="date" class="form-control" id="date_plan" th:value="${sales.date_plan}"
+										name="date_plan" required>
+								</div>
+								<input type="text" class="sonota"  th:value="${sales.id}" name="id" required readonly>
+								<div class="mb-1">
+									<label for="interview" class="form-label">面談数：</label>
+									<div>
+										<input type="number" class="interview" name="interview" th:value="${sales.interview}"
+											id="interview" required> / <input type="number" th:value="${sales.number_interview}"
+											class="number_interview" name="number_interview" required>
+									</div>
+								</div>
+								<div class="mb-1">
+									<label for="date_time" class="form-label">時間：</label> <input
+										type="time" class="form-control" id="date_time" th:value="${sales.date_time}"
+										name="date_time" required>
+								</div>
+								<div class="mb-1">
+									<label for="method" class="form-label">面談方法：</label> <span class="btn btn-secondary btn-sm" id ="sonota">その他</span>
+									<div id="methodBox">
+									<select
+										class="form-control" id="method" name="method">
+										<option th:value="${sales.method}" th:text="${sales.method}"></option>
+										<option value="対面">対面</option>
+										<option value="Web">Web</option>
+										<option value="電話">電話</option>
+									</select></div>
+								</div>
+								<div class="mb-1">
+									<label for="guest" class="form-label">お客様の情報：</label> <input
+										type="text" class="form-control" id="guest" name="guest" th:value="${sales.guest}"
+										required>
+								</div>
+								<div class="mb-1">
+									<label for="charge" class="form-label">担当：</label> <select
+										class="form-select" id="charge" name="charge">
+										<option th:each="charge : ${charge}" th:value="${charge.id}"
+											th:text="${charge.charge}"></option>
+									</select>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="mb-1">
+									<h3 class="form-label">面談対象：</h3>
+									<div class="row justify-content-center">
+										<h4 class="col-3" style="text-align:right;">即日:</h4>
+										<div class="col-9">
+											<div th:each="nowMonth : ${nowMonth}" class="checkbox">
+												<input type="checkbox" name='nameid[]' th:checked="${nowMonth.checkBox}"
+													th:value="${nowMonth.id}" th:id="${nowMonth.nameid}">
+												<label th:for="${nowMonth.nameid}">
+												<span th:text="${nowMonth.nameid}"></span>
+												<span class="inDateSales" th:if="${nowMonth.date_start != null}" th:text="'(' + ${nowMonth.date_start} + ')'"></span>
+													 </label>
+											</div>
+										</div>
+									</div>
+									<div class="row justify-content-center">
+										<h4 class="col-3" style="text-align:right;"th:text="${nextMothText}"></h4>
+										<div class="col-9">
+											<div th:each="nextMoth : ${nextMoth}" class="checkbox">
+												<input type="checkbox" name='nameid[]' th:checked="${nextMoth.checkBox}"
+													th:value="${nextMoth.id}" th:id="${nextMoth.nameid}">
+												<label th:for="${nextMoth.nameid}"> 
+												<span th:text="${nextMoth.nameid}"></span>
+												<span class="inDateSales" th:if="${nextMoth.date_start != null}" th:text="'(' + ${nextMoth.date_start} + ')'"></span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="row justify-content-center">
+										<h4 class="col-3" style="text-align:right;" th:text="${toNextMothText}"></h4>
+										<div class="col-9">
+											<div th:each="toNextMoth : ${toNextMoth}" class="checkbox">
+												<input type="checkbox" name='nameid[]' th:checked="${toNextMoth.checkBox}"
+													th:value="${toNextMoth.id}" th:id="${toNextMoth.nameid}">
+												<label th:for="${toNextMoth.nameid}">
+												<span th:text="${toNextMoth.nameid}"></span>
+												<span class="inDateSales" th:if="${toNextMoth.date_start != null}" th:text="'(' + ${toNextMoth.date_start} + ')'"></span>
+													</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="mb-1">
+									<label for="method" class="form-label">状況：</label>
+									<select
+										class="form-control" id="status" name="status">
+										<option th:value="${sales.status}" th:text="${sales.status}"></option>
+										<option value="結果待ち">結果待ち</option>
+										<option value="次面談待ち">次面談待ち</option>
+										<option value="合格">合格</option>
+										<option value="失敗">失敗</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<button type="submit"
+							class="btn btn-primary btn-block btn-outline-success" id="submit">予約</button>
+					</form>
+					<a href="/kk/mtg/job" class="btn btn-outline-danger mt-2">予約表示画面</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+</body>
+<script src="/style/js/salesEdit.js"></script>
+</html>

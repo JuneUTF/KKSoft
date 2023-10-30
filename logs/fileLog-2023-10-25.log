@@ -1,0 +1,261 @@
+2023-10-25 23:46:19.665  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 11532 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-25 23:46:19.662  INFO   Version.<clinit> - HV000001: Hibernate Validator 6.2.5.Final
+2023-10-25 23:46:19.669  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-25 23:46:19.727  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 23:46:19.728  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-25 23:46:21.044  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-25 23:46:21.053  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:46:21.054  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-25 23:46:21.055  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-25 23:46:21.113  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-25 23:46:21.115  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1385 ms
+2023-10-25 23:46:21.603  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-25 23:46:21.759  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5345f778, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2374071d, org.springframework.security.web.context.SecurityContextPersistenceFilter@34f5ed26, org.springframework.security.web.header.HeaderWriterFilter@d2c8ced, org.springframework.security.web.authentication.logout.LogoutFilter@3fefc705, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@679d991d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f6528bf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@268dd3f0, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@d6106d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2aef3c4d, org.springframework.security.web.session.SessionManagementFilter@2fe7407, org.springframework.security.web.access.ExceptionTranslationFilter@60526317, org.springframework.security.web.access.intercept.AuthorizationFilter@2a079641]
+2023-10-25 23:46:21.928  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-25 23:46:21.965  WARN   AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeController' method 
+com.juneutf.kk.mtg.controller.EmployeeController#getemployee()
+to {GET [/ad/employee]}: There is already 'employeeController' bean method
+com.juneutf.kk.mtg.controller.EmployeeController#getPurpose(APIMessengerModel) mapped.
+2023-10-25 23:46:21.970  INFO   StandardService.log - Stopping service [Tomcat]
+2023-10-25 23:46:21.984  INFO   ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-25 23:46:22.002  ERROR  SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeController' method 
+com.juneutf.kk.mtg.controller.EmployeeController#getemployee()
+to {GET [/ad/employee]}: There is already 'employeeController' bean method
+com.juneutf.kk.mtg.controller.EmployeeController#getPurpose(APIMessengerModel) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.juneutf.kk.mtg.MtgApplication.main(MtgApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeController' method 
+com.juneutf.kk.mtg.controller.EmployeeController#getemployee()
+to {GET [/ad/employee]}: There is already 'employeeController' bean method
+com.juneutf.kk.mtg.controller.EmployeeController#getPurpose(APIMessengerModel) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+2023-10-25 23:48:14.972  INFO   Version.<clinit> - HV000001: Hibernate Validator 6.2.5.Final
+2023-10-25 23:48:14.974  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 16952 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-25 23:48:14.976  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-25 23:48:15.034  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 23:48:15.034  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-25 23:48:16.275  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-25 23:48:16.284  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:48:16.285  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-25 23:48:16.285  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-25 23:48:16.344  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-25 23:48:16.345  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1310 ms
+2023-10-25 23:48:16.824  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-25 23:48:16.977  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72362f67, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@56c4ca26, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bf9c7b4, org.springframework.security.web.header.HeaderWriterFilter@4019909f, org.springframework.security.web.authentication.logout.LogoutFilter@d793a80, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d053c7f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3cdbf25a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4e4a715b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@77cc7012, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@bc24075, org.springframework.security.web.session.SessionManagementFilter@48f5c112, org.springframework.security.web.access.ExceptionTranslationFilter@309ba19b, org.springframework.security.web.access.intercept.AuthorizationFilter@121b386]
+2023-10-25 23:48:17.154  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-25 23:48:17.193  WARN   AnnotationConfigServletWebServerApplicationContext.refresh - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeController' method 
+com.juneutf.kk.mtg.controller.EmployeeController#getemployee(Model)
+to {GET [/ad/employee]}: There is already 'employeeController' bean method
+com.juneutf.kk.mtg.controller.EmployeeController#getPurpose(APIMessengerModel) mapped.
+2023-10-25 23:48:17.200  INFO   StandardService.log - Stopping service [Tomcat]
+2023-10-25 23:48:17.214  INFO   ConditionEvaluationReportLoggingListener.logMessage - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-10-25 23:48:17.234  ERROR  SpringApplication.reportFailure - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeController' method 
+com.juneutf.kk.mtg.controller.EmployeeController#getemployee(Model)
+to {GET [/ad/employee]}: There is already 'employeeController' bean method
+com.juneutf.kk.mtg.controller.EmployeeController#getPurpose(APIMessengerModel) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:921)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at com.juneutf.kk.mtg.MtgApplication.main(MtgApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'employeeController' method 
+com.juneutf.kk.mtg.controller.EmployeeController#getemployee(Model)
+to {GET [/ad/employee]}: There is already 'employeeController' bean method
+com.juneutf.kk.mtg.controller.EmployeeController#getPurpose(APIMessengerModel) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
+	... 21 common frames omitted
+2023-10-25 23:51:44.953  INFO   Version.<clinit> - HV000001: Hibernate Validator 6.2.5.Final
+2023-10-25 23:51:44.953  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 16644 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-25 23:51:44.956  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-25 23:51:45.010  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-25 23:51:45.012  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-25 23:51:46.208  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-25 23:51:46.215  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:51:46.217  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-25 23:51:46.217  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-25 23:51:46.279  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-25 23:51:46.281  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1269 ms
+2023-10-25 23:51:46.749  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-25 23:51:46.895  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2bc204ae, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c4777bf, org.springframework.security.web.context.SecurityContextPersistenceFilter@355e2a09, org.springframework.security.web.header.HeaderWriterFilter@2bec5b67, org.springframework.security.web.authentication.logout.LogoutFilter@2cad7094, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@146709ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@71663f92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@153d131d, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@38f36071, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67e904ac, org.springframework.security.web.session.SessionManagementFilter@2dc77756, org.springframework.security.web.access.ExceptionTranslationFilter@109d97eb, org.springframework.security.web.access.intercept.AuthorizationFilter@6a5f3931]
+2023-10-25 23:51:47.068  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-25 23:51:47.257  INFO   OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2023-10-25 23:51:47.274  INFO   Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:51:47.294  INFO   TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 23:51:47.296  INFO   SimpleBrokerMessageHandler.info - Starting...
+2023-10-25 23:51:47.296  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@15fa7e52]]
+2023-10-25 23:51:47.296  INFO   SimpleBrokerMessageHandler.info - Started.
+2023-10-25 23:51:47.307  INFO   MtgApplication.logStarted - Started MtgApplication in 2.704 seconds (JVM running for 3.59)
+2023-10-25 23:51:47.321  INFO   HikariDataSource.getConnection - HikariPool-1 - Starting...
+2023-10-25 23:51:47.502  INFO   HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2023-10-25 23:51:49.913  INFO   [/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 23:51:49.914  INFO   DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-10-25 23:51:49.915  INFO   DispatcherServlet.initServletBean - Completed initialization in 1 ms
+2023-10-25 23:52:23.042  INFO   LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-25 23:52:23.046  INFO   SimpleBrokerMessageHandler.info - Stopping...
+2023-10-25 23:52:23.046  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@15fa7e52]]
+2023-10-25 23:52:23.046  INFO   SimpleBrokerMessageHandler.info - Stopped.
+2023-10-25 23:52:23.063  INFO   Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:23.063  INFO   StandardService.log - Stopping service [Tomcat]
+2023-10-25 23:52:23.064  INFO   [/].log - Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-10-25 23:52:23.069  INFO   Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:23.072  INFO   Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:23.077  INFO   HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2023-10-25 23:52:23.079  INFO   HikariDataSource.close - HikariPool-1 - Shutdown completed.
+2023-10-25 23:52:23.156  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 16644 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-25 23:52:23.156  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-25 23:52:23.417  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-25 23:52:23.417  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:23.418  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-25 23:52:23.418  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-25 23:52:23.431  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-25 23:52:23.431  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 273 ms
+2023-10-25 23:52:23.576  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-25 23:52:23.619  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@8d3325e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@76f06efc, org.springframework.security.web.context.SecurityContextPersistenceFilter@3137d1d3, org.springframework.security.web.header.HeaderWriterFilter@449dff57, org.springframework.security.web.authentication.logout.LogoutFilter@522163b5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@796e604e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b340944, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50782632, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@200b981d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7c961c7c, org.springframework.security.web.session.SessionManagementFilter@2255f6f6, org.springframework.security.web.access.ExceptionTranslationFilter@4f70a726, org.springframework.security.web.access.intercept.AuthorizationFilter@185cd028]
+2023-10-25 23:52:23.653  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-25 23:52:23.703  INFO   OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2023-10-25 23:52:23.711  INFO   Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:23.714  INFO   TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 23:52:23.714  INFO   SimpleBrokerMessageHandler.info - Starting...
+2023-10-25 23:52:23.714  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@25be454e]]
+2023-10-25 23:52:23.714  INFO   SimpleBrokerMessageHandler.info - Started.
+2023-10-25 23:52:23.718  INFO   MtgApplication.logStarted - Started MtgApplication in 0.589 seconds (JVM running for 40.001)
+2023-10-25 23:52:23.718  INFO   HikariDataSource.getConnection - HikariPool-2 - Starting...
+2023-10-25 23:52:23.722  INFO   ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2023-10-25 23:52:23.783  INFO   HikariDataSource.getConnection - HikariPool-2 - Start completed.
+2023-10-25 23:52:32.472  INFO   LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-25 23:52:32.474  INFO   SimpleBrokerMessageHandler.info - Stopping...
+2023-10-25 23:52:32.474  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@25be454e]]
+2023-10-25 23:52:32.474  INFO   SimpleBrokerMessageHandler.info - Stopped.
+2023-10-25 23:52:32.491  INFO   Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:32.491  INFO   StandardService.log - Stopping service [Tomcat]
+2023-10-25 23:52:32.494  INFO   Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:32.495  INFO   Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:32.498  INFO   HikariDataSource.close - HikariPool-2 - Shutdown initiated...
+2023-10-25 23:52:32.500  INFO   HikariDataSource.close - HikariPool-2 - Shutdown completed.
+2023-10-25 23:52:32.558  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 16644 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-25 23:52:32.558  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-25 23:52:32.794  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-25 23:52:32.795  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:32.795  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-25 23:52:32.796  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-25 23:52:32.809  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-25 23:52:32.809  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 249 ms
+2023-10-25 23:52:32.944  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-25 23:52:32.983  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7e962120, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@634566df, org.springframework.security.web.context.SecurityContextPersistenceFilter@64f0e00c, org.springframework.security.web.header.HeaderWriterFilter@1f9ef07f, org.springframework.security.web.authentication.logout.LogoutFilter@321093c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@30579cbf, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4386dc1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ccd7831, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@3bb41b60, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f7bbc6c, org.springframework.security.web.session.SessionManagementFilter@48288b7d, org.springframework.security.web.access.ExceptionTranslationFilter@7f63f97a, org.springframework.security.web.access.intercept.AuthorizationFilter@433bdeab]
+2023-10-25 23:52:33.015  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-25 23:52:33.053  INFO   OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2023-10-25 23:52:33.060  INFO   Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:52:33.063  INFO   TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 23:52:33.064  INFO   SimpleBrokerMessageHandler.info - Starting...
+2023-10-25 23:52:33.064  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6a7f859]]
+2023-10-25 23:52:33.064  INFO   SimpleBrokerMessageHandler.info - Started.
+2023-10-25 23:52:33.068  INFO   HikariDataSource.getConnection - HikariPool-3 - Starting...
+2023-10-25 23:52:33.069  INFO   MtgApplication.logStarted - Started MtgApplication in 0.532 seconds (JVM running for 49.351)
+2023-10-25 23:52:33.071  INFO   ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2023-10-25 23:52:33.130  INFO   HikariDataSource.getConnection - HikariPool-3 - Start completed.
+2023-10-25 23:53:33.006  INFO   WebSocketMessageBrokerStats.lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2023-10-25 23:54:16.764  INFO   LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener.onApplicationEvent - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-10-25 23:54:16.765  INFO   SimpleBrokerMessageHandler.info - Stopping...
+2023-10-25 23:54:16.766  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@6a7f859]]
+2023-10-25 23:54:16.766  INFO   SimpleBrokerMessageHandler.info - Stopped.
+2023-10-25 23:54:16.784  INFO   Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:54:16.784  INFO   StandardService.log - Stopping service [Tomcat]
+2023-10-25 23:54:16.786  INFO   Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:54:16.787  INFO   Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:54:16.789  INFO   HikariDataSource.close - HikariPool-3 - Shutdown initiated...
+2023-10-25 23:54:16.790  INFO   HikariDataSource.close - HikariPool-3 - Shutdown completed.
+2023-10-25 23:54:16.856  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 16644 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-25 23:54:16.857  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-25 23:54:17.105  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-25 23:54:17.106  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:54:17.106  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-25 23:54:17.106  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-25 23:54:17.118  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-25 23:54:17.119  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 260 ms
+2023-10-25 23:54:17.261  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-25 23:54:17.302  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7fa00dc8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33b19f14, org.springframework.security.web.context.SecurityContextPersistenceFilter@6de21a4, org.springframework.security.web.header.HeaderWriterFilter@12b472c0, org.springframework.security.web.authentication.logout.LogoutFilter@66fbd36e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5c7c0a4e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d751ae1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c6647fd, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4dad5437, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f23dd56, org.springframework.security.web.session.SessionManagementFilter@26ad6b3a, org.springframework.security.web.access.ExceptionTranslationFilter@355bd365, org.springframework.security.web.access.intercept.AuthorizationFilter@1cda10f8]
+2023-10-25 23:54:17.343  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-25 23:54:17.397  INFO   OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2023-10-25 23:54:17.407  INFO   Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-25 23:54:17.410  INFO   TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-25 23:54:17.411  INFO   SimpleBrokerMessageHandler.info - Starting...
+2023-10-25 23:54:17.411  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@75edd016]]
+2023-10-25 23:54:17.411  INFO   SimpleBrokerMessageHandler.info - Started.
+2023-10-25 23:54:17.414  INFO   MtgApplication.logStarted - Started MtgApplication in 0.584 seconds (JVM running for 153.698)
+2023-10-25 23:54:17.414  INFO   HikariDataSource.getConnection - HikariPool-4 - Starting...
+2023-10-25 23:54:17.417  INFO   ConditionEvaluationDeltaLoggingListener.onApplicationEvent - Condition evaluation unchanged
+2023-10-25 23:54:17.476  INFO   HikariDataSource.getConnection - HikariPool-4 - Start completed.
+2023-10-25 23:54:18.111  INFO   [/].log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-10-25 23:54:18.111  INFO   DispatcherServlet.initServletBean - Initializing Servlet 'dispatcherServlet'
+2023-10-25 23:54:18.113  INFO   DispatcherServlet.initServletBean - Completed initialization in 2 ms
+2023-10-25 23:55:17.318  INFO   WebSocketMessageBrokerStats.lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juneutf.kk.office.mapper.SalesMapper">
+	<select id="selectNameidSameDay" parameterType="com.juneutf.kk.office.model.SalesModel" resultType="com.juneutf.kk.office.model.SalesModel">
+		SELECT id,nameid, date_start FROM employee
+		WHERE status = '営業' AND (date_start IS NULL OR EXTRACT(MONTH FROM date_start) = #{month});
+	</select>
+	<select id="selectNameIdFUll" resultType="com.juneutf.kk.office.model.SalesModel">
+		SELECT id,nameid, date_start FROM employee;
+	</select>
+	<select id="selectNameidNotSameDay" parameterType="com.juneutf.kk.office.model.SalesModel" resultType="com.juneutf.kk.office.model.SalesModel">
+		SELECT id,nameid,date_start FROM employee where status != '退職' AND EXTRACT(MONTH FROM date_start) = #{month};
+	</select>
+	<insert id="insertSales" parameterType="com.juneutf.kk.office.model.SalesModel">
+		INSERT INTO interview
+		(interview,number_interview,date_plan,date_day,date_time,method,nameid,guest,charge,status) 
+		VALUES 
+		(#{interview},#{number_interview},#{date_plan}::date,#{date_day},#{date_time},#{method},#{nameid},#{guest},#{charge},'面談');
+	</insert>
+	<select id="selectMaxId" resultType="int">
+	SELECT MAX(id) AS id FROM interview
+	</select>
+	<select id="selectSalesToDay" parameterType="com.juneutf.kk.office.model.SalesModel" resultType="com.juneutf.kk.office.model.SalesModel">
+	 SELECT
+    interview.id,interview.interview,interview.number_interview,interview.date_plan,interview.date_day,interview.date_time,interview.method,interview.nameid,interview.guest,user_infor.fullname AS chargename,interview.status
+	FROM interview
+    JOIN user_infor ON interview.charge = user_infor.ID
+	WHERE interview.date_plan >= current_date AND interview.status !='合格'  AND interview.status!='合格' ORDER BY interview.date_plan ASC;
+	</select>
+	<select id="selectSalesById" parameterType="com.juneutf.kk.office.model.SalesModel" resultType="com.juneutf.kk.office.model.SalesModel">
+	 SELECT
+    interview.id,interview.interview,interview.number_interview,interview.date_plan,interview.date_day,interview.date_time,interview.method,interview.nameid,interview.guest,interview.charge,user_infor.fullname AS chargename,interview.status
+	FROM interview
+    JOIN user_infor ON interview.charge = user_infor.ID
+	WHERE interview.id=#{id};
+	</select>
+	<update id="updateSalesById" parameterType="com.juneutf.kk.office.model.SalesModel">
+	UPDATE interview SET
+    interview = #{interview},number_interview = #{number_interview},date_plan = #{date_plan}::date,date_day = #{date_day},date_time = #{date_time},method = #{method},nameid = #{nameid},guest = #{guest},charge = #{charge},status = #{status}
+	WHERE id = #{id}; 
+	</update>
+</mapper>

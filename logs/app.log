@@ -7921,3 +7921,37 @@ org.postgresql.util.PSQLException: ERROR: "WHERE　id"またはその近辺で�
 2023-10-30 13:59:03.502  INFO   Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
 2023-10-30 13:59:03.504  INFO   HikariDataSource.close - HikariPool-101 - Shutdown initiated...
 2023-10-30 13:59:03.505  INFO   HikariDataSource.close - HikariPool-101 - Shutdown completed.
+2023-10-30 14:38:06.957  INFO   Version.<clinit> - HV000001: Hibernate Validator 6.2.5.Final
+2023-10-30 14:38:06.958  INFO   MtgApplication.logStarting - Starting MtgApplication using Java 17.0.8.1 on JuneUTF with PID 12936 (C:\JavaSpingBoot\K&K\MTG\target\classes started by juneu in C:\JavaSpingBoot\K&K\MTG)
+2023-10-30 14:38:06.960  INFO   MtgApplication.logStartupProfileInfo - No active profile set, falling back to 1 default profile: "default"
+2023-10-30 14:38:07.016  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-10-30 14:38:07.024  INFO   DevToolsPropertyDefaultsPostProcessor.logTo - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-10-30 14:38:08.396  INFO   TomcatWebServer.initialize - Tomcat initialized with port(s): 8080 (http)
+2023-10-30 14:38:08.404  INFO   Http11NioProtocol.log - Initializing ProtocolHandler ["http-nio-8080"]
+2023-10-30 14:38:08.405  INFO   StandardService.log - Starting service [Tomcat]
+2023-10-30 14:38:08.405  INFO   StandardEngine.log - Starting Servlet engine: [Apache Tomcat/9.0.80]
+2023-10-30 14:38:08.466  INFO   [/].log - Initializing Spring embedded WebApplicationContext
+2023-10-30 14:38:08.466  INFO   ServletWebServerApplicationContext.prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1441 ms
+2023-10-30 14:38:08.897  WARN   TemplateMode.parse - [THYMELEAF][restartedMain] Template Mode 'LEGACYHTML5' is deprecated. Using Template Mode 'HTML' instead.
+2023-10-30 14:38:09.122  INFO   DefaultSecurityFilterChain.<init> - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4f79da3a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@43a5628c, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ca19f3f, org.springframework.security.web.header.HeaderWriterFilter@59e867db, org.springframework.security.web.authentication.logout.LogoutFilter@44b0b0ee, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@773c3407, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1cb075ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@594f3700, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2bef586e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@b5d3877, org.springframework.security.web.session.SessionManagementFilter@2374071d, org.springframework.security.web.access.ExceptionTranslationFilter@101c0bb6, org.springframework.security.web.access.intercept.AuthorizationFilter@6a7652c8]
+2023-10-30 14:38:09.297  INFO   WelcomePageHandlerMapping.<init> - Adding welcome page template: index
+2023-10-30 14:38:09.491  INFO   OptionalLiveReloadServer.startServer - LiveReload server is running on port 35729
+2023-10-30 14:38:09.511  INFO   Http11NioProtocol.log - Starting ProtocolHandler ["http-nio-8080"]
+2023-10-30 14:38:09.530  INFO   TomcatWebServer.start - Tomcat started on port(s): 8080 (http) with context path ''
+2023-10-30 14:38:09.532  INFO   SimpleBrokerMessageHandler.info - Starting...
+2023-10-30 14:38:09.532  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2ca8dd30]]
+2023-10-30 14:38:09.533  INFO   SimpleBrokerMessageHandler.info - Started.
+2023-10-30 14:38:09.545  INFO   MtgApplication.logStarted - Started MtgApplication in 2.945 seconds (JVM running for 4.053)
+2023-10-30 14:38:09.563  INFO   HikariDataSource.getConnection - HikariPool-1 - Starting...
+2023-10-30 14:38:09.742  INFO   HikariDataSource.getConnection - HikariPool-1 - Start completed.
+2023-10-30 14:39:09.192  INFO   WebSocketMessageBrokerStats.lambda$initLoggingTask$0 - WebSocketSession[0 current WS(0)-HttpStream(0)-HttpPoll(0), 0 total, 0 closed abnormally (0 connect failure, 0 send limit, 0 transport error)], stompSubProtocol[processed CONNECT(0)-CONNECTED(0)-DISCONNECT(0)], stompBrokerRelay[null], inboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], outboundChannel[pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0], sockJsScheduler[pool size = 3, active threads = 1, queued tasks = 1, completed tasks = 1]
+2023-10-30 15:00:53.737  INFO   SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin.shutdown - Application shutdown requested.
+2023-10-30 15:00:53.739  INFO   SimpleBrokerMessageHandler.info - Stopping...
+2023-10-30 15:00:53.739  INFO   SimpleBrokerMessageHandler.info - BrokerAvailabilityEvent[available=false, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@2ca8dd30]]
+2023-10-30 15:00:53.739  INFO   SimpleBrokerMessageHandler.info - Stopped.
+2023-10-30 15:00:53.755  INFO   Http11NioProtocol.log - Pausing ProtocolHandler ["http-nio-8080"]
+2023-10-30 15:00:53.755  INFO   StandardService.log - Stopping service [Tomcat]
+2023-10-30 15:00:53.758  INFO   Http11NioProtocol.log - Stopping ProtocolHandler ["http-nio-8080"]
+2023-10-30 15:00:53.760  INFO   Http11NioProtocol.log - Destroying ProtocolHandler ["http-nio-8080"]
+2023-10-30 15:00:53.767  INFO   HikariDataSource.close - HikariPool-1 - Shutdown initiated...
+2023-10-30 15:00:53.769  INFO   HikariDataSource.close - HikariPool-1 - Shutdown completed.

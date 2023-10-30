@@ -17,8 +17,7 @@ public class IndexOfficeController {
 			if (!authentication.getName().equals("anonymousUser")) {
 				return "redirect:/kk/office/sales";
 			}
-			// 予約の取得
-			//xu ly man hinhg
+			// 写真画面表示
 			return "office/index";
 		} catch (Exception e) {
 			log.warn("面談管理システムのインデックスページが表示されてない。");
